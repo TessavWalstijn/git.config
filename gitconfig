@@ -1,0 +1,31 @@
+[core]
+	editor = code -w
+
+[alias]
+  # Update path for windows use
+	ssh = !bash -c 'ssh-add ~/.ssh/GitHub-SSH'
+	login = !bash -c 'ssh-add ~/.ssh/GitHub-SSH'
+	load = !bash -c 'ssh-add ~/.ssh/GitHub-SSH'
+	com = !git checkout main
+	coM = !git checkout master
+	cod = !git checkout develop
+	cob = !git checkout -b
+	co = !git checkout
+	a = !git add
+	aa = !git add .
+	a-a = !git add --all
+	rs = !git restore --staged
+	b = !git branch
+	ba = !git branch -add
+	bd = !git branch -d
+	bD = !git branch -D
+	cm = !git commit -m
+	acm = !git add . && git commit -m
+	ps = !git push
+	pusheen = !git push
+	pl = !git pull
+	po = !git pull origin
+	l = !git log
+	s = !git status
+	reauthor-input = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author \"$2\"\" $1' --
+	reauthor-config = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --reset-author\" $1' --
