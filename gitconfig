@@ -27,5 +27,6 @@
 	po = !git pull origin
 	l = !git log
 	s = !git status
+	up = !git push --set-upstream origin
 	reauthor-input = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --author \"$2\"\" $1' --
 	reauthor-config = !bash -c 'git rebase --onto $1 --exec \"git commit --amend --reset-author\" $1' --
