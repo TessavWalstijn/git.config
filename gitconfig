@@ -10,6 +10,7 @@
   coM = !git checkout master && git pull
   cod = !git checkout develop && git pull
   cob = !git checkout -b
+  cobup = !bash -c 'git cob $1 && git up $1' --
   co = !git checkout
   a = !git add
   aa = !git add .
@@ -23,11 +24,17 @@
   # NOTE: For Windows " is needed
   # bh = !git for-each-ref --sort=committerdate refs/heads/ --format="%(color: red)%(committerdate:short) %(color: cyan)%(refname:short)"
   cm = !git commit -m
+  cmf = !git commit --no-verify -m
+  cmp = !bash -c 'git cm $1 && git push' --
   acm = !git add . && git commit -m
+  acmf = !git add . && git commit --no-verify -m
+  acmp = !bash -c 'git acm $1 && git push' --
   ps = !git push
   pusheen = !git push
   pl = !git pull
   po = !git pull origin
+  pod = !git pull origin develop
+  pom = !git pull origin main
   l = !git log
   s = !git status
   up = !git push --set-upstream origin
