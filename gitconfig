@@ -25,6 +25,8 @@
   # bh = !git for-each-ref --sort=committerdate refs/heads/ --format="%(color: red)%(committerdate:short) %(color: cyan)%(refname:short)"
   cm = !git commit -m
   cmf = !git commit --no-verify -m
+  ca = !git commit --amend --no-edit
+  cam = !git commit --amend -m
   cmp = !bash -c 'git cm $1 && git push' --
   acm = !git add . && git commit -m
   acmf = !git add . && git commit --no-verify -m
