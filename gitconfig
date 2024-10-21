@@ -2,6 +2,8 @@
   editor = code -w
 
 [alias]
+  # In case ssh file permissions are too open
+  fix-ssh = !bash -c 'cd ~ && chmod 600 ~/.ssh/* && chmod 700 ~/.ssh && chmod 644 ~/.ssh/*.pub'
   # NOTE: For Windows use update SSH paths
   ssh = !bash -c 'ssh-add ~/.ssh/GitHub-SSH'
   login = !bash -c 'ssh-add ~/.ssh/GitHub-SSH'
