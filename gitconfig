@@ -33,6 +33,8 @@
   acm = !git add . && git commit -m
   acmf = !git add . && git commit --no-verify -m
   acmp = !bash -c 'git acm $1 && git push' --
+  hide-stash = git stash
+  grab-stash = git stash pop
   ps = !git push
   pusheen = !git push
   pl = !git pull
