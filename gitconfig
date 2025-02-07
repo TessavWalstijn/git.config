@@ -33,6 +33,9 @@
   acm = !git add . && git commit -m
   acmf = !git add . && git commit --no-verify -m
   acmp = !bash -c 'git acm $1 && git push' --
+  fire-branch = !bash -c 'export FIRE_DATE=$(date "+%Y-%m-%d_%H-%M-%S") && echo "date for fire: $FIRE_DATE" && export FIRE_USER=$(git config --global user.name) && echo "git username for fire: $FIRE_USER" && git cobup "fire/work-in-progress/$FIRE_USER/$FIRE_DATE"'
+  fire-commit = acmf '🔥🔥🔥 FIRE 🔥🔥🔥'
+  fire = !bash -c 'git fire-branch && git fire-commit && git push --force'
   hide-stash = git stash
   grab-stash = git stash pop
   ps = !git push
