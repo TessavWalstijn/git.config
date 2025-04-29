@@ -50,7 +50,7 @@
   # clone repo to other repo git@shiny.new:thing/name.git and set origin url
   move = !bash -c 'git push --all $1 && git push --tags $1 && git new-origin $1' --
   # set a new origin
-  new-origin = !bash -c 'git remote set-url origin $1 && git remote -v'
+  new-origin = !bash -c 'git remote set-url origin $1 && git remote -v' --
 
 [pull]
   rebase = false
